@@ -1,13 +1,16 @@
-var nome = "johnny";
-var idade = 18;
-var ehMaiorDeIdade = true;
-var frutas = ['uva', 'abacaxi', 'maçã'];
-var indefinido = undefined;
-var nullo = null;
-var pessoa = {
-    nome: "johnny",
-    idade: 18,
-    profissao: "estudante"
+var treinos = [];
+function registrarTreino(workout) {
+    treinos.push(workout);
+}
+function listarTreinos(Exibir) {
+    Exibir.forEach(function (workout) {
+        console.log(workout);
+    });
+}
+var treinoDeMusculacao = {
+    tipo: "Treino de perna",
+    duracao: 30,
+    intensidade: "alta"
 };
-pessoa.idade = 20;
-console.log(pessoa.idade);
+registrarTreino(treinoDeMusculacao);
+listarTreinos(treinos);

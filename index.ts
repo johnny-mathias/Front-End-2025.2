@@ -1,24 +1,27 @@
-let nome = "johnny"
-
-let idade = 18
-
-let ehMaiorDeIdade = true
-
-let frutas: string[] = ['uva', 'abacaxi', 'maçã']
-
-let indefinido = undefined
-
-let nullo = null
-
-interface Pessoa {
-    nome: string
-    idade: number
-    profissao: string
+interface Workout {
+    tipo: string,
+    duracao: number,
+    intensidade: string
 }
 
-const pessoa: Pessoa = {
-    nome:"johnny",
-    idade:18,
-    profissao:"estudante"
+const treinos: Workout[] = []
+
+function registrarTreino(workout:Workout){
+    treinos.push(workout);
 }
 
+function listarTreinos(Exibir:Workout[]) {
+    Exibir.forEach((workout) => {
+        console.log(workout)
+    });
+}
+
+const treinoDeMusculacao:Workout = {
+    tipo: "Treino de perna",
+    duracao: 30,
+    intensidade: "alta"
+}
+
+registrarTreino(treinoDeMusculacao)
+
+listarTreinos(treinos)
